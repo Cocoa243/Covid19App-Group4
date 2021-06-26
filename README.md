@@ -1,2 +1,2 @@
-# portfolio
-cheetahcodes portfolio/cv website, group work: covid-19 app & JS projects
+# covid19App-Group4
+cheetahcodes  group work: covid-19 app 
