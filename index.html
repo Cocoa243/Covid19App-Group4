@@ -41,17 +41,25 @@
                       Symptoms
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#symptoms">Symptoms</a></li>
-                      <li><a class="dropdown-item" href="#symptoms">Testing</a></li>
+                      <li><a class="dropdown-item" href="symptoms.html">Symptoms</a></li>
+                      <li><a class="dropdown-item" href="testing.html">Testing</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#symptoms">Self Isolation</a></li>
+                      <li><a class="dropdown-item" href="selfisolation.html">Self Isolation</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#vaccinations">Vaccination</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#after-covid19">After COVID-19</a>
+                    <a class="nav-link" href="index.html">After COVID-19</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="safetyquiz.html">Safety quiz</a>
+                  </li>
+                  <li class="nav-item">
+                    <button type="button" class="btn btn-light" onclick="myDownload()"> <li><a href="5rules.pdf" target="_blank" class="button"> Download 5 most important rules
+                      in corona times </a><i class="fa fa-download"></i></li>
+                    </button>
                   </li>
                 </ul>
                 <form class="d-flex">
@@ -116,8 +124,9 @@
               <div class="card-header">Symptom checker</div>
               <div class="card-body">
                   <h5 class="card-title">Check your symptoms quickly</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="card-link">More</a>
+                  <p class="card-text">COVID-19 affects different people in different ways.
+                    Most infected people will develop mild to moderate illness and recover without hospitalization.</p>
+                  <a href="symptoms.html" class="card-link">More</a>
               </div>
             </div>
             <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
@@ -125,8 +134,9 @@
               <div class="card-header">Testing centres</div>
                 <div class="card-body">
                     <h5 class="card-title">Find a testing centre near you</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">More</a>
+                    <p class="card-text"> There are different tests you can get to check if you have coronavirus (COVID-19). 
+                      The test you need depends on why you're getting tested.</p>
+                    <a href="testing.html" class="card-link">More</a>
                 </div>
             </div>
             <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
@@ -135,7 +145,7 @@
               <div class="card-body">
                   <h5 class="card-title">Stay healthy while self isolating</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="card-link">More</a>
+                  <a href="selfisolation.html" class="card-link">More</a>
               </div>
             </div>
             <h1>Symptoms/testing/self-isolation</h1>
@@ -224,6 +234,7 @@
             <p>
               So far, millions of people have been given a COVID-19 vaccine and reports of serious side effects, such as allergic reactions or clotting problems, have been very rare.
             </p>
+           <h3><b><a href="vaccination.html" class="card-link">Learn more about covid-19 vaccination</a></b></h3> 
         </article>
         <article>
           <p>
@@ -462,6 +473,11 @@
     </footer>
     
     <script src="" async defer></script>
+    <script>
+      function myDownload() {
+  alert("The downlable file is open on the next tab");
+}
+    </script>
     
     </body>
 </html>
