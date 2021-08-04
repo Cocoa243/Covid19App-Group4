@@ -119,24 +119,56 @@
     <section id="symptoms" class="section-1">
         <h2> Safety quiz</h2>
         <h1>Take the test</h1>
-<p>
-Washing hands :
- It is important. I wash my hands several times a day throughout the whole day
- It is moderately important. I was my hands occasionnaly
- It is not important, I do not pay attention to it
-Wearing a face mask in busy environments :
- I  always wear a face mask in places where the distance of 1.5 meters cannot be respected
- I usually wear a face mask in places where the distance of 1.5 meters cannot be respected
- I do not wear a face mask in places where the distance of 1.5 meters cannot be respected
-Keeping a minimum distance of 1.5 metres (from people outside your bubble) :
- I  always respect a distance of 1.5 meters with people outside my bubble
- I usually respect a distance of 1.5 meters with people outside my bubble
- I do not respected a distance of 1.5 meters with people outside my bubble
+<div id="wrapper">
+  <h1>What kind of safety hero are you?</h1>
+  <p>Take this questionnaire to find out!</p>
+  
+  <form id="quiz">
+    <!-- Question 1 -->
+    <h2>Washing hands: </h2>
+    <!-- Here are the choices for the first question. Each input tag must have the same name. For this question, the name is q1. -->
+    <!-- The value is which answer the choice corresponds to. -->
+    <label><input type="radio" name="q1" value="c1">
+      It is important. I wash my hands several times a day throughout the whole day
+    </label><br />
+    <label><input type="radio" name="q1" value="c2">
+      It is moderately important. I was my hands occasionnaly
+    </label><br />
+    <label><input type="radio" name="q1" value="c3">
+      It is not important, I do not pay attention to it
+    </label><br />
+    <!-- Question 2 -->
+    <h2>Wearing a face mask in busy environments :</h2>
+    <!-- Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question. -->
+    <label><input type="radio" name="q2" value="c1">
+      I  always wear a face mask in places where the distance of 1.5 meters cannot be respected
+    </label><br />
+    <label><input type="radio" name="q2" value="c2">
+      I usually wear a face mask in places where the distance of 1.5 meters cannot be respected
+    </label><br />
+    <label><input type="radio" name="q2" value="c3">
+      I do not wear a face mask in places where the distance of 1.5 meters cannot be respected
+    </label><br />
 
-
-
-
-</p>
+    
+    <!-- Question 3 -->
+    <h2>Keeping a minimum distance of 1.5 metres (from people outside your bubble) :</h2>
+    <!-- Choices for the third question -->
+    <label><input type="radio" name="q3" value="c1">
+      I  always respect a distance of 1.5 meters with people outside my bubble
+    </label><br />
+    <label><input type="radio" name="q3" value="c2">
+      I usually respect a distance of 1.5 meters with people outside my bubble
+    </label><br />
+    <label><input type="radio" name="q3" value="c3">
+      I do not respected a distance of 1.5 meters with people outside my bubble
+    </label><br />
+    
+    <button type="submit" id="submit" onclick="tabulateAnswers()">Submit Your Answers</button>
+  
+  </form>
+   <div id="answer">Your result will show up here!</div>
+</div>
            
 
     </section>
@@ -159,9 +191,7 @@ Keeping a minimum distance of 1.5 metres (from people outside your bubble) :
     /*5 tips download alert*/
         function myDownload() {
     alert("The downlable file is open on the next tab");
-  }
-
-      </script>
-    
+  }      </script>
+    <script src="safetyquiz.js"></script>
     </body>
 </html>
