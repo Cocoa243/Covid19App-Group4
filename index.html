@@ -35,32 +35,32 @@
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ms-auto navbar-nav-scroll">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#header">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Symptoms</a>
                         <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                            <li><a class="dropdown-item" href="article.html">Symptoms</a></li>
+                            <li><a class="dropdown-item" href="symptoms.html">Symptoms</a></li>
                             <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="terms.html">Testing</a></li>
+                            <li><a class="dropdown-item" href="testing.html">Testing</a></li>
                             <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="privacy.html">Self-Isolation</a></li>
+                            <li><a class="dropdown-item" href="selfisolation.html">Self-Isolation</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Vaccination</a>
+                        <a class="nav-link" href="vaccination.html">Vaccination</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">After Covid-19</a>
+                        <a class="nav-link" href="aftercovid.html">After Covid-19</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                    
                 </ul>
                 <span class="nav-item">
-                    <a class="btn-outline-sm" href="#contact">Safety quiz</a>
+                    <a class="btn-outline-sm" href="safetyquiz.html">Safety test</a>
                 </span>
 
                 <li class="nav-item btn">
@@ -231,6 +231,25 @@
                     <div class="card-container">
                         </div>
                     </div>
+ <!-- Stats in Belgium -->
+ <h2>Stats</h2>
+ <div>
+    <p id="country"></p>
+    <p id="confirmed"></p>
+    <p id="recovered"></p>
+    <p id="critical"></p>
+    <p id="lastupdate"></p>
+    <p>Source: https://covid19-api.com/</p>
+
+</div>
+                    
+                
+                </div> <!-- end of text-container -->
+            </div> <!-- end of col -->
+            <div class="col-lg-7">
+                <div class="card-container">
+                    </div>
+                </div>
 
     
 
@@ -297,10 +316,7 @@
     <!-- end of copyright -->
     
 
-    <!-- Back To Top Button -->
-    <button onclick="topFunction()" id="myBtn">
-        <img src="images/up-arrow.png" alt="alternative">
-    </button>
+   
     <!-- end of back to top button -->
     	
     <!-- Scripts -->
@@ -308,5 +324,7 @@
     <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
     <script src="js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
