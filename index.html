@@ -232,13 +232,17 @@
                         </div>
                     </div>
  <!-- Stats in Belgium -->
- <div id="services" class="cards-1 bg-gray">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5">
-                <div class="text-container">
-                    <h2>Covid-19 numbers</h2>
-                    <p><a href="./stats/public/index.html"> Get the latest Covid numbers for Belgium </a>  </p>
+ <h2>Stats</h2>
+ <div>
+    <p id="country"></p>
+    <p id="confirmed"></p>
+    <p id="recovered"></p>
+    <p id="critical"></p>
+    <p id="lastupdate"></p>
+    <p>Source: https://covid19-api.com/</p>
+
+</div>
+                    
                 
                 </div> <!-- end of text-container -->
             </div> <!-- end of col -->
@@ -320,14 +324,7 @@
     <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
     <script src="js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
-    <!--REACT SCRIPTS-->
-    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react@16/umd/react.production.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-       <!-- Charge notre composant React -->
-       <script src="./stats/public/index.js"></script>
-       <script src="./stats/src/App.js"></script>
-       <script src="./stats/src/CovidNumbers.js"></script>
-    <script src="/static/js/bundle.js"></script><script src="/static/js/vendors~main.chunk.js"></script><script src="/static/js/main.chunk.js"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

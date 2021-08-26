@@ -16,6 +16,42 @@
 	
 	<!-- Favicon  -->
     <link rel="icon" href="images/Covidappimages.png">
+
+    <style>
+      .choice {
+  height: 400px;
+  display: inline-block;
+  width: 100px;
+}
+
+.result {
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.bar {
+  height: 0%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.bar[data-choice="1"] {
+  background-color: blue;
+}
+
+.bar[data-choice="2"] {
+  background-color: purple;
+}
+
+
+
+.label {
+  height: 70px;
+  text-align: center;
+}
+    </style>
 </head>
 <body>
     
@@ -249,7 +285,49 @@
         </div> <!-- end of container -->
     </div> <!-- end of ex-basic-1 -->
     <!-- end of basic -->
-
+   <!-- VOTES -->
+   <div class="ex-basic-1 pt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                
+                      <p>
+                        People have different opinions regarding the vaccination. 
+                        Are you in favor or against the Covid vaccination? 
+                      </p>
+                      <div id="choices">
+                        <div class="choice">
+                          <div class="result">
+                            <div class="bar" data-choice="1"></div>
+                          </div>
+                          <div class="label">
+                            <p>PRO</p>
+                            <button data-choice="1">Vote</button>
+                          </div>
+                        </div>
+                        <div class="choice">
+                          <div class="result">
+                            <div class="bar" data-choice="2"></div>
+                          </div>
+                          <div class="label">
+                            <p>AGAINST</p>
+                            <button data-choice="2">Vote</button>
+                          </div>
+                        </div>
+                        <div class="choice">
+                          <div class="result">
+                            <div class="bar" data-choice="3"></div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    
+        
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of ex-basic-1 -->
+<!-- end of basic -->
 
  
   <!-- Footer -->
@@ -322,5 +400,52 @@
 <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
 <script src="js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
 <script src="js/scripts.js"></script> <!-- Custom scripts -->
+<!--Vote Script-->
+<script>
+var buttons = document.querySelectorAll(".choice button"),
+  tally = {
+    1: 0,
+    2: 0,
+    total: 0
+  };
+
+function vote(choice) {
+  tally[choice]++;
+  tally["total"]++;
+  console.log(tally);
+}
+
+function barPercentage(node, tally) {
+  var choice = node.dataset.choice;
+  
+  if (tally[choice])
+    return tally[choice]/tally["total"] * 100;
+  return 0;
+}
+
+function renderBars() {
+  var bars = document.getElementsByClassName("bar");
+  
+  for (var i = 0; i < bars.length; i++) {
+    var percentage = barPercentage(bars[i], tally);
+    console.log(percentage)
+    bars[i].style.height = percentage.toString() + "%";
+  }
+}
+
+function setup() {
+  // Set up event listeners
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function(e) {
+      vote(e.target.dataset["choice"]);
+      renderBars();
+    });
+  }
+  
+  renderBars();
+}
+
+setup();
+</script>
 </body>
 </html>
